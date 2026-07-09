@@ -49,7 +49,7 @@ A lab is done only when it passes five gates:
 
 | Lab | Status | Build |
 | --- | --- | --- |
-| `mini-agent` | active | Minimal Claude Code-style coding agent |
+| `mini-agent` | active | Minimal Claude Code-style coding agent in `labs/mini-agent` |
 
 ## Rule
 

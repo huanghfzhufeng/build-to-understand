@@ -1,58 +1,122 @@
 # mini-agent
 
-Build and explain a minimal Claude Code-style coding agent.
+A minimal, readable, end-to-end coding agent for learning how Claude Code-style terminal agents work.
 
-## Current Build
-
-The first working build lives as an independent open-source repository:
-
-- Repository: https://github.com/huanghfzhufeng/mini-claude-code
-- Local checkout: `/Users/zeke/agent dome/zhufeng/mini-claude-code`
-
-This lab page is the learning record inside `build-to-understand`. The implementation remains in its own repository to keep it usable as a public teaching project.
-
-## Black Box
-
-How does a terminal coding agent turn a user task into real code changes?
-
-## Smallest Build
-
-A deterministic coding agent that can:
-
-1. inspect a tiny project;
-2. find a TODO bug;
-3. read the relevant file;
-4. apply a patch;
-5. inspect the git diff;
-6. run tests;
-7. write a session trace.
-
-## Core Mechanism
+This is not a Claude Code clone. It is a small learning project that exposes the core loop:
 
 ```text
-observations
--> planner.next_step()
--> tool call
--> tool runner
--> observation
--> repeat
+task
+-> gather project context
+-> choose a tool
+-> run the tool
+-> observe the result
+-> edit files
+-> run verification
+-> summarize evidence
 ```
 
-The core is not code generation. The core is feedback: tool results become observations, and observations drive the next action.
+## Why This Exists
 
-## Current Status
+Most people first see coding agents as magic: prompt in, code out.
 
-- runnable: yes
-- verifiable: yes, `python3 -m pytest`
-- aligned: partially, mirrors the local loop of Claude Code-style agents
-- explainable: initial README exists
-- compressed: initial principles recorded below
+This lab takes the opposite path. It keeps the system small enough that you can inspect every moving part:
 
-## Principle Snapshot
+- `agent.py` is the loop.
+- `planner.py` chooses the next action.
+- `tools.py` reads files, searches text, applies patches, and runs commands.
+- `show_diff` lets the agent inspect its own edits before verification.
+- `safety.py` blocks a few destructive commands.
+- `session.py` writes an append-only JSONL trace.
+- `examples/buggy_project` is a tiny project the agent can fix.
 
-1. A coding agent is a loop, not a prompt.
-2. Tools turn decisions into effects.
-3. Observations turn effects back into context.
-4. Trace makes the loop auditable.
-5. Verification separates coding agents from code generators.
-6. Diff inspection lets the agent see its own edits before testing.
+The first version uses `ScriptedPlanner`, a deterministic planner, so the whole demo runs without an API key. A real LLM planner can replace it later without changing the tool layer or the agent loop.
+
+## Quick Start
+
+```bash
+git clone https://github.com/huanghfzhufeng/build-to-understand.git
+cd build-to-understand/labs/mini-agent
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
+pytest
+```
+
+Run the demo agent against the buggy example:
+
+```bash
+cd examples/buggy_project
+git init
+git add .
+git commit -m baseline
+python3 -m mini_claude_code.cli "Fix the TODO bug and run tests."
+```
+
+The agent will:
+
+1. list files
+2. search for `TODO`
+3. read `calculator.py`
+4. apply a small patch
+5. inspect the git diff
+6. run the equivalent of `python -m pytest`
+7. write a trace to `.mini-claude-code/session.jsonl`
+
+## The Minimal Agent Contract
+
+A coding agent needs five pieces:
+
+| Piece | In this repo | Job |
+| --- | --- | --- |
+| Context | `list_files`, `read_file`, `grep` | See the real project before editing |
+| Tools | `ToolRunner` | Turn model/tool decisions into effects |
+| Loop | `CodingAgent.run` | Feed observations back into the next decision |
+| Safety | `assert_safe_command` | Block obvious destructive commands |
+| Verification | `run_command("{python} -m pytest")` | Check whether the edit worked |
+
+`{python}` is replaced with the current Python executable, so verification uses the same environment that is running the agent.
+
+The key idea is that tool results go back into the loop. Without that feedback, the system is just a code generator. With it, the system can act, observe, and correct.
+
+## Learning Notes
+
+The lab record lives in `notes/`:
+
+- `notes/references.md`: alignment sources and current gaps.
+- `notes/failures.md`: wrong assumptions and debugging notes.
+- `notes/principles.md`: compressed ideas that should transfer.
+- `notes/explain.md`: a plain explanation for teaching.
+
+## Current Limits
+
+This lab is intentionally small:
+
+- no real LLM planner yet
+- no streaming UI
+- no permission prompts
+- no MCP
+- no subagents
+- no long-term memory
+
+Those are later layers. The first layer is the complete local loop.
+
+## Roadmap
+
+- [ ] Add an OpenAI-compatible planner.
+- [ ] Add a Claude/Anthropic planner.
+- [ ] Add explicit user approval for patches and commands.
+- [ ] Add diff previews before edits.
+- [ ] Add project memory loading from `AGENTS.md`.
+- [ ] Add trace viewer for session logs.
+- [ ] Add tutorial chapters for each layer.
+
+## Learning Rule
+
+Do not treat this repo as a finished tool. Treat it as a microscope.
+
+When adding a feature, ask:
+
+1. What part of a coding agent does this reveal?
+2. What is the smallest working version?
+3. How do we verify it?
+4. Can a reader understand it from the code and trace?

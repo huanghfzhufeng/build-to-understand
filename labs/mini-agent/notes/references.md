@@ -4,7 +4,7 @@
 
 - Claude Code docs: https://code.claude.com/docs
 - Claude Code SDK docs: https://code.claude.com/docs/en/agent-sdk/overview
-- Current build: https://github.com/huanghfzhufeng/mini-claude-code
+- Current build: `build-to-understand/labs/mini-agent`
 
 ## Alignment Notes
 

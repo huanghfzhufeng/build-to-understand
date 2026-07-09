@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mini-claude-code/
+dist/
+*.egg-info/
