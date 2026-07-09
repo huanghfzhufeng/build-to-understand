@@ -23,6 +23,7 @@ black box
 ```text
 build-to-understand/
   MANIFESTO.md
+  OPERATING_SYSTEM.md
   ROADMAP.md
   labs/
     mini-agent/
@@ -32,6 +33,8 @@ build-to-understand/
 ```
 
 Labs are intentionally not numbered. The order of learning changes with curiosity and need. The current sequence lives in `ROADMAP.md`, not in directory names.
+
+Read `OPERATING_SYSTEM.md` for the full protocol behind this repo: what counts as understanding, how a lab should be built, and how each topic is verified.
 
 ## What Counts As Done
 

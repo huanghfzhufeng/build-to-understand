@@ -4,6 +4,8 @@ Everything I Understand, I Can Build.
 
 This is the operating rule of the lab.
 
+The complete operating protocol lives in `OPERATING_SYSTEM.md`.
+
 Understanding is not knowing the right words. It is not collecting references. It is not calling an API. It is not repeating somebody else's explanation.
 
 Understanding means I can:
