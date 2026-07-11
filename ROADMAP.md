@@ -5,6 +5,7 @@ This file tracks learning order. Directory names stay unordered so the lab can f
 ## Active
 
 - `mini-agent`: build and explain a minimal Claude Code-style coding agent.
+- `mini-object-store`: build presigned-URL object storage to understand R2/S3. Steps 1-3 done (presigned URLs, multipart upload, lifecycle/cold-tier); next: migrate the real TikTok analyzer to R2 (store the key in the DB, serve via presigned GET).
 
 ## Candidate Labs
 
