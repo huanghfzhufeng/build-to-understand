@@ -1,5 +1,8 @@
 # build-to-understand
 
+<p align="center"><img src="./docs/images/architecture-overview.svg" alt="build-to-understand Systems Lab Overview" width="100%" /></p>
+
+
 Everything I Understand, I Can Build.
 
 This repository is a long-term lab for understanding systems by building their smallest working versions.
