@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="290" viewBox="0 0 880 290" fill="none">
+  <defs>
+    <pattern id="g" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="1" height="1" fill="#334155" opacity="0.45"/>
+    </pattern>
+  </defs>
+  <rect x="6" y="6" width="874" height="284" fill="#070A0F" shape-rendering="crispEdges"/>
+  <rect x="4" y="0" width="868" height="286" fill="#2B3B52" shape-rendering="crispEdges"/>
+  <rect x="0" y="4" width="876" height="278" fill="#2B3B52" shape-rendering="crispEdges"/>
+  <rect x="4" y="4" width="868" height="278" fill="#111822" shape-rendering="crispEdges"/>
+  <rect x="4" y="4" width="868" height="278" fill="url(#g)" opacity="0.5"/>
+  <rect x="4" y="4" width="868" height="34" fill="#0B1017" shape-rendering="crispEdges"/>
+  <rect x="4" y="38" width="868" height="2" fill="#2B3B52" shape-rendering="crispEdges"/>
+  <rect x="18" y="17" width="8" height="8" fill="#4ADE80" shape-rendering="crispEdges"/>
+  <rect x="30" y="17" width="8" height="8" fill="#F59E0B" shape-rendering="crispEdges"/>
+  <rect x="42" y="17" width="8" height="8" fill="#38BDF8" shape-rendering="crispEdges"/>
+  <text x="64" y="25" fill="#F1F5F9" font-family="'SF Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace" font-size="13" font-weight="800" letter-spacing="1.2">BUILD-TO-UNDERSTAND // KARPATHY-STYLE SYSTEMS LAB</text>
+  <text x="856" y="25" text-anchor="end" fill="#38BDF8" font-family="'SF Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace" font-size="11" font-weight="700" letter-spacing="1">SYSTEMS ARCHITECTURE</text>
+
+  <rect x="24" y="58" width="192" height="88" fill="#0B1017" stroke="#2B3B52" stroke-width="2" shape-rendering="crispEdges"/>
+  <rect x="24" y="58" width="192" height="4" fill="#4ADE80" shape-rendering="crispEdges"/>
+  <text x="38" y="84" fill="#4ADE80" font-family="'SF Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace" font-size="12" font-weight="800">01 MINIMAL</text>
+  <text x="38" y="108" fill="#F1F5F9" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', -apple-system, sans-serif" font-size="13" font-weight="600">最小可运行原型</text>
+  <text x="38" y="128" fill="#94A3B8" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', -apple-system, sans-serif" font-size="11.5">低复杂度重建核心机制</text>
+  <line x1="218" y1="102" x2="228" y2="102" stroke="#4ADE80" stroke-width="2.5" shape-rendering="crispEdges"/><polygon points="234,102 225,97 225,107" fill="#4ADE80"/>
+  <rect x="236" y="58" width="192" height="88" fill="#0B1017" stroke="#2B3B52" stroke-width="2" shape-rendering="crispEdges"/>
+  <rect x="236" y="58" width="192" height="4" fill="#38BDF8" shape-rendering="crispEdges"/>
+  <text x="250" y="84" fill="#38BDF8" font-family="'SF Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace" font-size="12" font-weight="800">02 ALIGN</text>
+  <text x="250" y="108" fill="#F1F5F9" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', -apple-system, sans-serif" font-size="13" font-weight="600">真实系统对齐</text>
+  <text x="250" y="128" fill="#94A3B8" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', -apple-system, sans-serif" font-size="11.5">对照工业级实现找差异</text>
+  <line x1="430" y1="102" x2="440" y2="102" stroke="#38BDF8" stroke-width="2.5" shape-rendering="crispEdges"/><polygon points="446,102 437,97 437,107" fill="#38BDF8"/>
+  <rect x="448" y="58" width="192" height="88" fill="#0B1017" stroke="#2B3B52" stroke-width="2" shape-rendering="crispEdges"/>
+  <rect x="448" y="58" width="192" height="4" fill="#F59E0B" shape-rendering="crispEdges"/>
+  <text x="462" y="84" fill="#F59E0B" font-family="'SF Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace" font-size="12" font-weight="800">03 DEBUG</text>
+  <text x="462" y="108" fill="#F1F5F9" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', -apple-system, sans-serif" font-size="13" font-weight="600">失败与边界测试</text>
+  <text x="462" y="128" fill="#94A3B8" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', -apple-system, sans-serif" font-size="11.5">用真实报错定位因果链</text>
+  <line x1="642" y1="102" x2="652" y2="102" stroke="#F59E0B" stroke-width="2.5" shape-rendering="crispEdges"/><polygon points="658,102 649,97 649,107" fill="#F59E0B"/>
+  <rect x="660" y="58" width="192" height="88" fill="#0B1017" stroke="#2B3B52" stroke-width="2" shape-rendering="crispEdges"/>
+  <rect x="660" y="58" width="192" height="4" fill="#A78BFA" shape-rendering="crispEdges"/>
+  <text x="674" y="84" fill="#A78BFA" font-family="'SF Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace" font-size="12" font-weight="800">04 TEACH</text>
+  <text x="674" y="108" fill="#F1F5F9" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', -apple-system, sans-serif" font-size="13" font-weight="600">压缩原则与传授</text>
+  <text x="674" y="128" fill="#94A3B8" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', -apple-system, sans-serif" font-size="11.5">沉淀可迁移的心智模型</text>
+  <rect x="24" y="168" width="404" height="96" fill="#0B1017" stroke="#2B3B52" stroke-width="2" shape-rendering="crispEdges"/>
+  <rect x="24" y="168" width="404" height="4" fill="#4ADE80" shape-rendering="crispEdges"/>
+  <text x="38" y="194" fill="#4ADE80" font-family="'SF Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace" font-size="12" font-weight="800">LAB 01 // labs/mini-agent</text>
+  <text x="38" y="218" fill="#F1F5F9" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', -apple-system, sans-serif" font-size="13" font-weight="600">从零构造 Claude Code 风格 Coding Agent</text>
+  <text x="38" y="238" fill="#94A3B8" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', -apple-system, sans-serif" font-size="11.5">工具调用循环 · 上下文压缩 · 子代理隔离 · 完整 pytest 回归</text>
+  <rect x="452" y="168" width="404" height="96" fill="#0B1017" stroke="#2B3B52" stroke-width="2" shape-rendering="crispEdges"/>
+  <rect x="452" y="168" width="404" height="4" fill="#38BDF8" shape-rendering="crispEdges"/>
+  <text x="466" y="194" fill="#38BDF8" font-family="'SF Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace" font-size="12" font-weight="800">LAB 02 // labs/mini-object-store</text>
+  <text x="466" y="218" fill="#F1F5F9" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', -apple-system, sans-serif" font-size="13" font-weight="600">从零构造内容寻址对象存储引擎</text>
+  <text x="466" y="238" fill="#94A3B8" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', -apple-system, sans-serif" font-size="11.5">分块哈希 · 引用计数 · 崩溃恢复 · 完整一致性测试</text>
+</svg>
